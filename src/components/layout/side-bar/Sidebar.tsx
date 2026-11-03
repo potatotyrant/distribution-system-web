@@ -47,8 +47,7 @@ const Brand = styled.div`
 const BrandMark = styled.div`
   font-family: "Recital", serif;
   font-weight: 400;
-  /* 26px at -0.02em measures ~266px; sidebar inner width is 272px. */
-  font-size: 26px;
+  font-size: 19.5px;
   line-height: 1.3;
   letter-spacing: -0.02em;
   color: #fafafa;
