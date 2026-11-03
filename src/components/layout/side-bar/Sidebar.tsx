@@ -41,9 +41,19 @@ const SidebarContainer = styled.nav`
 
 const Brand = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: ${layout.wordmarkPaddingTop}px 0 ${layout.wordmarkPaddingBottom}px;
   margin-bottom: ${wordmarkMarginBottom}px;
+`;
+
+const Logo = styled.img`
+  width: ${layout.logoWidth}px;
+  height: ${layout.logoHeight}px;
+  display: block;
+  margin: 0 0 ${layout.logoGap}px;
+  object-fit: contain;
+  object-position: left center;
 `;
 
 const BrandMark = styled.div`
@@ -71,6 +81,7 @@ export default function Sidebar() {
   return (
     <SidebarContainer>
       <Brand>
+        <Logo src="/audioguys-logo.png" alt="Audioguys" />
         <BrandMark>
           Audioguys for Artists<TradeMark>™</TradeMark>
         </BrandMark>
