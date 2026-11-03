@@ -5,6 +5,7 @@ import CommunitySection from "./CommunitySection";
 import ContentSection from "./ContentSection";
 import ContractSection from "./ContractSection";
 import ServiceSection from "./ServiceSection";
+import audioguysLogoSrc from "@/assets/audioguys-logo";
 import { layout, wordmarkMarginBottom } from "@/styles/layout-metrics";
 import styled from "styled-components";
 import { useAuthStore } from "@/stores/use-auth-store";
@@ -81,7 +82,7 @@ export default function Sidebar() {
   return (
     <SidebarContainer>
       <Brand>
-        <Logo src="/audioguys-logo.png" alt="Audioguys" />
+        <Logo src={audioguysLogoSrc} alt="" aria-label="Audioguys" />
         <BrandMark>
           Audioguys for Artists<TradeMark>™</TradeMark>
         </BrandMark>
