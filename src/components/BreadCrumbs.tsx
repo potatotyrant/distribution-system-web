@@ -32,6 +32,12 @@ const BreadcrumbWrapper = styled.div`
   gap: 10px;
   min-width: 0;
 
+  svg {
+    width: 12px;
+    height: 12px;
+    display: block;
+  }
+
   svg path {
     stroke: #8a8a8a;
   }
