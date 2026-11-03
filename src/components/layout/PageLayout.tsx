@@ -1,5 +1,6 @@
 "use client";
 
+import { layout } from "@/styles/layout-metrics";
 import styled from "styled-components";
 
 const PageLayout = styled.main`
@@ -9,7 +10,7 @@ const PageLayout = styled.main`
   min-height: 100vh;
 
   > :last-child {
-    padding: 8px 60px 0;
+    padding: ${layout.contentPaddingTop}px 60px 0;
   }
 
   @media (max-width: 768px) {

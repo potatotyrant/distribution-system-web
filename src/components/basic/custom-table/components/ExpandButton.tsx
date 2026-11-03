@@ -11,9 +11,9 @@ const Button = styled.button<{ $isExpanded: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  padding: 5px;
+  width: 16.8px;
+  height: 16.8px;
+  padding: 0;
   border-radius: 50%;
   border: 1px solid
     ${({ $isExpanded }) =>
@@ -33,8 +33,8 @@ const ExpandButton = ({ isExpanded, onClick }: ExpandButtonProps) => {
   return (
     <Button $isExpanded={isExpanded} onClick={onClick}>
       <ArrowDownIcon
-        width={13.5}
-        height={13.5}
+        width={8.1}
+        height={8.1}
         color={isExpanded ? theme.colors.purple[600] : theme.colors.gray[500]}
       />
     </Button>

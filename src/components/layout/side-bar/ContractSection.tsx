@@ -22,7 +22,11 @@ const ContractSection = () => {
     <Container>
       <MenuGroupButton onClick={() => setIsOpen(!isOpen)}>
         계약 관리
-        {isOpen ? <ArrowUpIcon /> : <ArrowDownIcon />}
+        {isOpen ? (
+          <ArrowUpIcon width={14} height={14} />
+        ) : (
+          <ArrowDownIcon width={14} height={14} />
+        )}
       </MenuGroupButton>
 
       <MenuGroup $isOpen={isOpen}>
