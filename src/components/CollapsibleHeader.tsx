@@ -37,8 +37,8 @@ const IconWrapper = styled.div`
   border: 1px solid ${theme.colors.purple[600]}; /* purple600 */
 
   svg {
-    width: 13.5px;
-    height: 13.5px;
+    width: 10.2px;
+    height: 10.2px;
     flex-shrink: 0;
   }
 `;
@@ -67,14 +67,14 @@ const CollapsibleHeader: React.FC<CollapsibleHeaderProps> = ({
           {isOpen ? (
             <ArrowUpIcon
               color={theme.colors.purple[600]}
-              width={13.5}
-              height={13.5}
+              width={10.2}
+              height={10.2}
             />
           ) : (
             <ArrowDownIcon
               color={theme.colors.purple[600]}
-              width={13.5}
-              height={13.5}
+              width={10.2}
+              height={10.2}
             />
           )}
         </IconWrapper>

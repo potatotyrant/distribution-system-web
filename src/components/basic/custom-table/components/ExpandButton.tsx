@@ -26,8 +26,8 @@ const Button = styled.button<{ $isExpanded: boolean }>`
   transition: all 0.2s ease;
 
   svg {
-    width: 13.5px;
-    height: 13.5px;
+    width: 10.2px;
+    height: 10.2px;
     flex-shrink: 0;
     transform: ${({ $isExpanded }) =>
       $isExpanded ? "rotate(180deg)" : "rotate(0)"};
@@ -39,8 +39,8 @@ const ExpandButton = ({ isExpanded, onClick }: ExpandButtonProps) => {
   return (
     <Button $isExpanded={isExpanded} onClick={onClick}>
       <ArrowDownIcon
-        width={13.5}
-        height={13.5}
+        width={10.2}
+        height={10.2}
         color={isExpanded ? theme.colors.purple[600] : theme.colors.gray[500]}
       />
     </Button>
