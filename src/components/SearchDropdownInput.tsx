@@ -33,7 +33,7 @@ const List = styled.ul`
   margin: 0;
   background: ${theme.colors.white};
   z-index: 1;
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid ${theme.colors.gray[50]};
   overflow: hidden;
   max-height: 300px;

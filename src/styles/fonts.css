@@ -10,3 +10,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Recital Trial Book, aliased to family "Recital". Book is the only weight shipped. */
+@font-face {
+  font-family: "Recital";
+  src: url("../fonts/Recital-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

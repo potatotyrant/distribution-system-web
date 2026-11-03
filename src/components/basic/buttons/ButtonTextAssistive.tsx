@@ -26,7 +26,7 @@ const ButtonWrapper = styled.button<{
     }
   }};
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   background-color: transparent;
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
   display: flex;

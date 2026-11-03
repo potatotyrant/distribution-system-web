@@ -6,7 +6,6 @@ import ContentSection from "./ContentSection";
 import ContractSection from "./ContractSection";
 import ServiceSection from "./ServiceSection";
 import styled from "styled-components";
-import theme from "@/styles/theme";
 import { useAuthStore } from "@/stores/use-auth-store";
 
 const SidebarContainer = styled.nav`
@@ -41,34 +40,19 @@ const SidebarContainer = styled.nav`
 
 const Brand = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px 8px 12px;
+  align-items: center;
+  padding: 8px 4px 12px;
+  min-width: 0;
 `;
 
 const BrandMark = styled.div`
-  ${theme.fonts.heading2.medium};
-  color: #fafafa;
+  font-family: "Recital", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
   letter-spacing: -0.03em;
-  line-height: 1.1;
-`;
-
-const BrandMeta = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  ${theme.fonts.mono};
-  font-size: 11px;
-  line-height: 16px;
-  color: #f2592a;
-
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #f2592a;
-    flex-shrink: 0;
-  }
+  color: #fafafa;
+  white-space: nowrap;
 `;
 
 export default function Sidebar() {
@@ -78,12 +62,7 @@ export default function Sidebar() {
   return (
     <SidebarContainer>
       <Brand>
-        <BrandMark>
-          Audioguys
-          <br />
-          Music
-        </BrandMark>
-        <BrandMeta>Est. 2000 · Seoul</BrandMeta>
+        <BrandMark>Audioguys for Artists™</BrandMark>
       </Brand>
       {user.authLevel === AuthLevel.ADMIN && <ContractSection />}
       {user.authLevel === AuthLevel.ADMIN && (

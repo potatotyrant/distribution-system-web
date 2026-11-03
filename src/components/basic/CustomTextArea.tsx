@@ -43,7 +43,7 @@ const TextAreaContainer = styled.div<{
   width: ${({ $expand }) => ($expand ? "100%" : "320px")};
   height: ${({ $height }) => ($height ? $height : "auto")};
   min-height: ${({ $expand }) => ($expand ? "100%" : "160px")};
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid
     ${({ $isError, $disabled }) =>
       $isError
@@ -97,8 +97,7 @@ const TextArea = styled.textarea<{
   `}
 
   &::placeholder {
-    color: ${({ $disabled }) =>
-      $disabled ? theme.colors.gray[100] : theme.colors.gray[300]};
+    color: #cacaca;
     font-feature-settings: "ss10" on;
     ${theme.fonts.body1.regular}
   }

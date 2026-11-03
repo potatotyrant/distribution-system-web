@@ -41,7 +41,7 @@ const ButtonWrapper = styled.button<{
         return "40px";
     }
   }};
-  border-radius: 2px;
+  border-radius: 8px;
 
   &:hover {
     background-color: ${(props) =>

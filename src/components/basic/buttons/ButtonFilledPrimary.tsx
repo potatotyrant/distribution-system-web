@@ -16,10 +16,8 @@ const ButtonWrapper = styled.button<{
   $disabled?: boolean;
   $size?: "large" | "medium" | "small";
   $expand?: boolean;
-  $arrow?: boolean;
 }>`
   padding: ${(props) => {
-    if (props.$arrow) return "8px 8px 8px 22px";
     switch (props.$size) {
       case "medium":
         return "8px 18px";
@@ -29,8 +27,8 @@ const ButtonWrapper = styled.button<{
         return "12px 24px";
     }
   }};
-  border: 1px solid ${(props) => (props.$disabled ? "#eaeaea" : "#3a3a3a")};
-  border-radius: 999px;
+  border: 1px solid ${(props) => (props.$disabled ? "#eaeaea" : "#2a2a2a")};
+  border-radius: 8px;
   background-color: ${(props) => (props.$disabled ? "#f6f6f6" : "#0a0a0a")};
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
   display: flex;
@@ -92,23 +90,6 @@ const IconWrapper = styled.span<{
   }
 `;
 
-const ArrowCircle = styled.span<{ $disabled?: boolean }>`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: ${(props) => (props.$disabled ? "#cacaca" : "#fafafa")};
-  color: #0a0a0a;
-  flex-shrink: 0;
-
-  svg {
-    width: 14px;
-    height: 14px;
-  }
-`;
-
 const LabelWrapper = styled.span<{ $size?: "large" | "medium" | "small" }>`
   ${(props) => {
     switch (props.$size) {
@@ -131,14 +112,12 @@ const ButtonFilledPrimary: React.FC<ButtonFilledPrimaryProps> = ({
   size = "large",
   expand = false,
 }) => {
-  const showArrow = size === "large" && !rightIcon && !leftIcon;
   return (
     <ButtonWrapper
       onClick={disabled ? undefined : onClick}
       $disabled={disabled}
       $size={size}
       $expand={expand}
-      $arrow={showArrow}
     >
       {leftIcon && (
         <IconWrapper $disabled={disabled} $size={size}>
@@ -150,19 +129,6 @@ const ButtonFilledPrimary: React.FC<ButtonFilledPrimaryProps> = ({
         <IconWrapper $disabled={disabled} $size={size}>
           {rightIcon}
         </IconWrapper>
-      )}
-      {showArrow && (
-        <ArrowCircle $disabled={disabled} aria-hidden>
-          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M3 7h8M8 3.5 11.5 7 8 10.5"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </ArrowCircle>
       )}
     </ButtonWrapper>
   );
