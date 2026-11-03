@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: space-between;
   gap: 16px;
   border: 1px solid #2a2a2a;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 8px 8px 8px 14px;
   background: #0a0a0a;
   flex-shrink: 0;
@@ -25,9 +25,12 @@ const UserInfoWrapper = styled.div`
 `;
 
 const UserInfoLabel = styled.div`
-  ${theme.fonts.mono};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
   font-size: 10px;
-  line-height: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-transform: none;
   color: #8a8a8a;
 `;
 
