@@ -36,7 +36,7 @@ const DropZone = styled.div<{ $isDragging: boolean; $readOnly: boolean }>`
   border: 1.5px dashed
     ${({ $isDragging }) =>
       $isDragging ? theme.colors.purple[600] : theme.colors.gray[50]};
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;

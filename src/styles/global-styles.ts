@@ -13,7 +13,8 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-family: var(--font-pretendard), Pretendard, sans-serif;
-    line-height: 1.5;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #fafafa;

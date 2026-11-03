@@ -11,14 +11,15 @@ const Container = styled.div`
   display: flex;
   min-height: 100vh;
   width: 100%;
-  padding: 3rem 3.75rem;
+  /* Was 48px top/bottom and 60px left. 24px is 50% of 48 and 40% of 60. */
+  padding: 24px 60px 24px 24px;
   gap: 1.25rem;
   box-sizing: border-box;
-  background: #0a0a0a;
+  background: #fafafa;
 
   @media (max-width: 800px) {
     flex-direction: column;
-    padding: 24px 8px 48px;
+    padding: 16px 16px 16px 16px;
     gap: 28px;
   }
 `;
@@ -26,17 +27,50 @@ const Container = styled.div`
 const LeftSection = styled.div`
   flex: 1;
   position: relative;
-  border-radius: 2px;
+  border-radius: 16px;
   overflow: hidden;
   min-height: 0;
   border: 1px solid #2a2a2a;
   background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
 
   @media (max-width: 800px) {
     flex: none;
     width: 100%;
-    min-height: 220px;
+    min-height: 280px;
   }
+`;
+
+const PanelCopy = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 100%;
+`;
+
+const PanelTitle = styled.h2`
+  font-family: "Recital", serif;
+  font-weight: 400;
+  font-size: 46px;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  color: #fafafa;
+  white-space: nowrap;
+`;
+
+const PanelSub = styled.p`
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  color: #fafafa;
 `;
 
 const RightSection = styled.div`
@@ -67,7 +101,12 @@ export default function LoginPage() {
 
   return (
     <Container>
-      <LeftSection />
+      <LeftSection>
+        <PanelCopy>
+          <PanelTitle>Audioguys for Artists™</PanelTitle>
+          <PanelSub>발매부터 정산까지, 내 음악의 모든 다음 단계</PanelSub>
+        </PanelCopy>
+      </LeftSection>
       <RightSection>
         <LoginForm />
       </RightSection>

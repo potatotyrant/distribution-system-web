@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   typescript: {
+    // Pre-existing TS2345 in AlbumUserContract and VideoUserContract.
     ignoreBuildErrors: true,
   },
 

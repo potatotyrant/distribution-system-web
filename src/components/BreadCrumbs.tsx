@@ -6,7 +6,6 @@ import Link from "next/link";
 import LoginInfo from "./LoginInfo";
 import React from "react";
 import styled from "styled-components";
-import theme from "@/styles/theme";
 import { usePathname } from "next/navigation";
 
 const Container = styled.div`
@@ -15,10 +14,10 @@ const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   gap: 24px;
-  background: #0a0a0a;
-  color: #fafafa;
+  background: #fafafa;
+  color: #0a0a0a;
   padding: 18px 60px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #eaeaea;
   min-height: 76px;
 
   @media (max-width: 768px) {
@@ -33,31 +32,27 @@ const BreadcrumbWrapper = styled.div`
   gap: 10px;
   min-width: 0;
 
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #f2592a;
-    flex-shrink: 0;
-  }
-
   svg path {
-    stroke: #6a6a6a;
+    stroke: #8a8a8a;
   }
 `;
 
 const PrevBreadcrumb = styled.div`
-  ${theme.fonts.mono};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
   font-size: 12px;
-  line-height: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   color: #8a8a8a;
 `;
 
 const CurrentBreadcrumb = styled.div`
-  ${theme.fonts.mono};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
   font-size: 12px;
-  line-height: 16px;
-  color: #fafafa;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
 `;
 
 const Breadcrumbs = () => {

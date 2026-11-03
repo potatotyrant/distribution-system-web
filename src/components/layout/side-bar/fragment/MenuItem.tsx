@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-import theme from "@/styles/theme";
 
 const MenuGroupButton = styled.div`
   display: flex;
@@ -11,18 +10,12 @@ const MenuGroupButton = styled.div`
   align-self: stretch;
   gap: 10px;
   cursor: pointer;
-  ${theme.fonts.mono};
-  font-size: 12px;
-  line-height: 16px;
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   color: #fafafa;
-
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #f2592a;
-    flex-shrink: 0;
-  }
 
   > :last-child {
     margin-left: auto;
@@ -39,25 +32,18 @@ const MenuGroup = styled.div<{ $isOpen: boolean }>`
 `;
 
 const MenuLabel = styled.div`
-  ${theme.fonts.mono};
-  font-size: 11px;
-  line-height: 16px;
-  color: #8a8a8a;
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #eaeaea;
   display: flex;
-  height: 28px;
-  padding: 0 8px 0 8px;
+  height: 32px;
+  padding: 0 8px;
   justify-content: flex-start;
   align-items: center;
   align-self: stretch;
-  gap: 10px;
-
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #f2592a;
-    flex-shrink: 0;
-  }
 `;
 
 const MenuItem = styled.div<{ $isActive?: boolean }>`
@@ -97,8 +83,11 @@ const MenuItem = styled.div<{ $isActive?: boolean }>`
   `
       : ""}
 
-  ${theme.fonts.body2.medium};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-size: 15px;
   font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 `;
 
 const MenuItemLink = styled(Link)``;

@@ -50,7 +50,7 @@ const InputContainer = styled.div<{
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid
     ${({ $isError, $disabled }) =>
       $isError
@@ -92,8 +92,7 @@ const Input = styled.input<{
 
   &::placeholder {
     overflow: hidden;
-    color: ${({ $disabled }) =>
-      $disabled ? theme.colors.gray[100] : theme.colors.gray[500]};
+    color: #cacaca;
     font-feature-settings: "ss10" on;
     text-overflow: ellipsis;
 

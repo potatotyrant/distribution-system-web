@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: space-between;
   gap: 16px;
   border: 1px solid #2a2a2a;
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 8px 8px 8px 14px;
   background: #0a0a0a;
   flex-shrink: 0;

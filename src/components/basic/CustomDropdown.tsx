@@ -49,7 +49,7 @@ const DropdownContainer = styled.button<{
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid
     ${({ $disabled }) =>
       $disabled ? theme.colors.gray[25] : theme.colors.gray[50]};
@@ -103,7 +103,7 @@ const ListContainer = styled.div`
 
 const List = styled.ul`
   background: ${theme.colors.white};
-  border-radius: 2px;
+  border-radius: 8px;
   border: 1px solid ${theme.colors.gray[50]};
   list-style: none;
   margin: 0;
