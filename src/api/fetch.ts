@@ -1,5 +1,4 @@
 import { API_URL } from "@/constants/api";
-import { PREVIEW_MODE, previewApiData } from "@/constants/preview";
 import { useAuthStore } from "@/stores/use-auth-store";
 import { useUserStore } from "@/stores/use-user-store";
 
@@ -17,14 +16,6 @@ export const apiFetch = async <T>(
   path: string,
   options: FetchOptions = {},
 ): Promise<FetchResponse<T>> => {
-  if (PREVIEW_MODE) {
-    return {
-      error: false,
-      data: previewApiData as T,
-      message: "preview",
-    };
-  }
-
   const jwt = useAuthStore.getState().jsonWebToken;
   const url = `${API_URL}${path}`;
   // jwt가 있을 때만 포함할 헤더 설정

@@ -3,7 +3,6 @@
 import { AuthLevel, UserType } from "@/types/user";
 import { usePathname, useRouter } from "next/navigation";
 
-import { PREVIEW_MODE, previewUser } from "@/constants/preview";
 import { useAuthStore } from "@/stores/use-auth-store";
 import { useEffect } from "react";
 import { useUserStore } from "@/stores/use-user-store";
@@ -18,17 +17,6 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // 세션스토리지의 상태가 로드된 후에 체크
     if (!isHydrated) {
-      return;
-    }
-
-    if (PREVIEW_MODE) {
-      if (!user || user.authLevel !== AuthLevel.ADMIN) {
-        useAuthStore.setState({
-          user: previewUser,
-          jsonWebToken: "preview",
-          isAdmin: true,
-        });
-      }
       return;
     }
 
