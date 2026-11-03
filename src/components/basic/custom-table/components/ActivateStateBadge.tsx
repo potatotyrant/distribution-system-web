@@ -15,9 +15,12 @@ const Container = styled.div<{ $isActive: boolean }>`
   background-color: ${({ $isActive }) =>
     $isActive ? theme.colors.green[100] : theme.colors.gray[50]};
   color: ${({ $isActive }) => ($isActive ? "#0e7a45" : theme.colors.gray[400])};
-  ${theme.fonts.mono};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-transform: none;
   font-size: 11px;
-  line-height: 16px;
   gap: 6px;
 `;
 

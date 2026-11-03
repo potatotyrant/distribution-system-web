@@ -21,9 +21,12 @@ const Container = styled.div<{ $type: UserType }>`
     $type === UserType.COMPANY
       ? theme.colors.blue[600]
       : theme.colors.purple[600]};
-  ${theme.fonts.mono};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-transform: none;
   font-size: 11px;
-  line-height: 16px;
   gap: 6px;
 `;
 

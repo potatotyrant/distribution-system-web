@@ -23,13 +23,12 @@ const StatusIndicator = styled.div<{ color: string }>`
 
 const StatusText = styled.span`
   color: #1a1a1a;
-  font-family: "MD System Mono", "Fragment Mono", ui-monospace, monospace,
-    var(--font-pretendard), sans-serif;
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
   font-weight: 400;
   font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  text-transform: none;
 `;
 
 interface StatusDisplayProps {

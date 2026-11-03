@@ -63,9 +63,12 @@ const HeaderCell = styled.th<{
   $align?: "left" | "center" | "right";
   $size?: "small" | "normal";
 }>`
-  ${theme.fonts.mono};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
   font-size: ${({ $size }) => ($size === "small" ? "10px" : "11px")};
-  line-height: 16px;
+  line-height: 1.4;
   color: ${theme.colors.gray[400]};
   padding: ${({ $size }) => ($size === "small" ? "12px" : "16px")} 24px;
   text-align: ${({ $align }) => $align || "center"};
