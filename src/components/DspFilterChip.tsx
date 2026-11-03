@@ -21,6 +21,7 @@ const Container = styled.div`
   /* Chip gap was 4px. English names were mono; force Pretendard. */
   > div {
     gap: 12px;
+    border-radius: 8px;
     font-family: var(--font-pretendard), Pretendard, sans-serif;
     font-weight: 400;
     font-size: 14px;
