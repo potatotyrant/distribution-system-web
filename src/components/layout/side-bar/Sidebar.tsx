@@ -41,16 +41,16 @@ const SidebarContainer = styled.nav`
 const Brand = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px 4px 12px;
-  min-width: 0;
+  padding: 8px 0 12px;
 `;
 
 const BrandMark = styled.div`
   font-family: "Recital", serif;
   font-weight: 400;
-  font-size: 18px;
+  /* 26px at -0.02em measures ~266px; sidebar inner width is 272px. */
+  font-size: 26px;
   line-height: 1.3;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: #fafafa;
   white-space: nowrap;
 `;
