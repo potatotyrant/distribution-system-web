@@ -64,6 +64,14 @@ const PanelTitle = styled.h2`
   white-space: nowrap;
 `;
 
+const TradeMark = styled.span`
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+`;
+
 const PanelSub = styled.p`
   font-family: var(--font-pretendard), Pretendard, sans-serif;
   font-weight: 400;
@@ -103,7 +111,9 @@ export default function LoginPage() {
     <Container>
       <LeftSection>
         <PanelCopy>
-          <PanelTitle>Audioguys for Artists™</PanelTitle>
+          <PanelTitle>
+            Audioguys for Artists<TradeMark>™</TradeMark>
+          </PanelTitle>
           <PanelSub>발매부터 정산까지, 내 음악의 모든 다음 단계</PanelSub>
         </PanelCopy>
       </LeftSection>

@@ -55,6 +55,14 @@ const BrandMark = styled.div`
   white-space: nowrap;
 `;
 
+const TradeMark = styled.span`
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+`;
+
 export default function Sidebar() {
   const user = useAuthStore((state) => state.user);
   if (!user) return null;
@@ -62,7 +70,9 @@ export default function Sidebar() {
   return (
     <SidebarContainer>
       <Brand>
-        <BrandMark>Audioguys for Artists™</BrandMark>
+        <BrandMark>
+          Audioguys for Artists<TradeMark>™</TradeMark>
+        </BrandMark>
       </Brand>
       {user.authLevel === AuthLevel.ADMIN && <ContractSection />}
       {user.authLevel === AuthLevel.ADMIN && (
