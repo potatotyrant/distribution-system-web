@@ -1,6 +1,7 @@
 import { createJSONStorage, persist } from "zustand/middleware";
 
-import { User } from "@/types/user";
+import { AuthLevel, User } from "@/types/user";
+import { previewUser } from "@/constants/preview";
 import { create } from "zustand";
 import { getUsers } from "@/api/user/get-users";
 import { login } from "@/api/user/login";
@@ -14,8 +15,11 @@ interface AuthStore {
   isAdmin: boolean;
   jsonWebToken: string | null;
   isHydrated: boolean;
+  /** True only for the no-login preview session. Real logins keep calling the API. */
+  isPreviewSession: boolean;
 
   login: (account: string, password: string) => Promise<void>;
+  enterPreview: () => void;
   logout: () => void;
   setHydrated: () => void;
 }
@@ -29,6 +33,17 @@ export const useAuthStore = create<AuthStore>()(
       isAdmin: false,
       jsonWebToken: null,
       isHydrated: false,
+      isPreviewSession: false,
+      enterPreview: () => {
+        set({
+          user: previewUser,
+          jsonWebToken: "preview",
+          isAdmin: true,
+          isPreviewSession: true,
+          error: null,
+          isLoading: false,
+        });
+      },
       login: async (account: string, password: string) => {
         try {
           set({ isLoading: true, error: null });
@@ -41,13 +56,24 @@ export const useAuthStore = create<AuthStore>()(
 
           if (!response.data.user) {
             toast.error(response.message);
+            set({
+              user: previewUser,
+              jsonWebToken: "preview",
+              isAdmin: true,
+              isPreviewSession: true,
+              error: response.message,
+            });
             return;
           }
 
           set({
-            user: response.data!.user,
+            user: {
+              ...response.data!.user,
+              authLevel: AuthLevel.ADMIN,
+            },
             jsonWebToken: response.data!.jsonWebToken,
-            isAdmin: response.data!.isAdmin,
+            isAdmin: true,
+            isPreviewSession: false,
           });
         } catch (error) {
           const errorMessage =
@@ -59,13 +85,24 @@ export const useAuthStore = create<AuthStore>()(
 
           console.error("[useUserStore/login] Login failed.", error);
 
-          set({ user: null, jsonWebToken: null, error: errorMessage });
+          set({
+            user: previewUser,
+            jsonWebToken: "preview",
+            isAdmin: true,
+            isPreviewSession: true,
+            error: errorMessage,
+          });
         } finally {
           set({ isLoading: false });
         }
       },
       logout: () => {
-        set({ user: null, jsonWebToken: null, isAdmin: false });
+        set({
+          user: null,
+          jsonWebToken: null,
+          isAdmin: false,
+          isPreviewSession: false,
+        });
         useSettlementStore.getState().reset();
       },
       setHydrated: () => set({ isHydrated: true }),

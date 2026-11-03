@@ -28,21 +28,13 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
           return;
         }
 
-        // ADMIN이 아닌 사용자의 접근 제한
+        // Client-side only: every signed-in user can open every sidebar section.
         if (user.authLevel !== AuthLevel.ADMIN) {
-          const allowedPaths = [
-            "/service/settlement-status/list",
-            "/service/settlement-status/detail",
-            "/community/announcement",
-          ];
-
-          // 현재 경로가 허용된 경로 목록에 없으면 메인 페이지로 리다이렉트
-          if (!allowedPaths.some((path) => pathname.startsWith(path))) {
-            router.replace("/community/announcement"); // 또는 다른 기본 페이지로 리다이렉트
-            return;
-          }
+          useAuthStore.setState({
+            user: { ...user, authLevel: AuthLevel.ADMIN },
+            isAdmin: true,
+          });
         }
-        // 필요한 경우 토큰 유효성 검증 추가
       } catch (error) {
         console.error("Auth validation failed:", error);
         router.replace("/login");

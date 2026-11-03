@@ -48,7 +48,7 @@ export default function VideoList() {
       width: 103,
       align: "center",
       render: (value, row, index) => {
-        const titleList = value as TitleLanguage[];
+        const titleList = (value as TitleLanguage[] | null) ?? [];
         const videoId = row._id;
 
         // 우선순위에 따라 앨범명 선택
@@ -77,7 +77,8 @@ export default function VideoList() {
       width: 103,
       align: "center",
       render: (value, row, index) => {
-        const trackList = value as { trackId: string; title: string }[];
+        const trackList =
+          (value as { trackId: string; title: string }[] | null) ?? [];
         return (
           <RenderText>
             {trackList.length > 0 ? trackList[0].title : ""}
@@ -92,7 +93,7 @@ export default function VideoList() {
       width: 120,
       align: "center",
       render: (value, row, index) => {
-        const artistList = value as ArtistInfo[];
+        const artistList = (value as ArtistInfo[] | null) ?? [];
         return (
           <RenderText>
             {artistList.length > 0 ? artistList[0].name : ""}

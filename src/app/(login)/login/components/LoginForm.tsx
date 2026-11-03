@@ -54,10 +54,26 @@ const Title = styled.h1`
   letter-spacing: -0.03em;
 `;
 
+const PreviewLink = styled.button`
+  ${theme.fonts.mono};
+  align-self: flex-start;
+  font-size: 11px;
+  line-height: 16px;
+  color: #8a8a8a;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: #f2592a;
+  }
+`;
+
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isLoading, user, jsonWebToken, login } = useAuthStore();
+  const { isLoading, user, jsonWebToken, login, enterPreview } = useAuthStore();
 
   const handleLogin = () => {
     if (!email || !password) {
@@ -86,6 +102,9 @@ export default function LoginForm() {
         onChange={(e) => setPassword(e.target.value)}
       />
       <ButtonFilledPrimary label="로그인" expand onClick={handleLogin} />
+      <PreviewLink type="button" onClick={() => enterPreview()}>
+        Preview without login
+      </PreviewLink>
     </Container>
   );
 }

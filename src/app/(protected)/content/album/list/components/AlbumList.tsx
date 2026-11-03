@@ -69,7 +69,7 @@ export default function AlbumList() {
       width: 103,
       align: "center",
       render: (value, row, index) => {
-        const titleList = value as TitleLanguage[];
+        const titleList = (value as TitleLanguage[] | null) ?? [];
 
         // 우선순위에 따라 앨범명 선택
         let title = "";
@@ -97,7 +97,7 @@ export default function AlbumList() {
       width: 120,
       align: "center",
       render: (value, row, index) => {
-        const artistList = value as ArtistInfo[];
+        const artistList = (value as ArtistInfo[] | null) ?? [];
         return (
           <RenderText>
             {artistList.length > 0 ? artistList[0].name : ""}

@@ -144,8 +144,8 @@ export default function SettlementList() {
       type: "string",
       align: "center",
       render: (value) => {
-        const _value = value as number;
-        return _value.toLocaleString();
+        const _value = value as number | null;
+        return (_value ?? 0).toLocaleString();
       },
     },
     {
@@ -154,8 +154,8 @@ export default function SettlementList() {
       type: "string",
       align: "center",
       render: (value) => {
-        const _value = value as number;
-        return _value.toLocaleString();
+        const _value = value as number | null;
+        return (_value ?? 0).toLocaleString();
       },
     },
   ];
@@ -167,28 +167,28 @@ export default function SettlementList() {
       <ExpandedContent>
         <ExpandedTitle>플랫폼별 상세 내역</ExpandedTitle>
         <ServiceList>
-          {summary.serviceList.map((service, index) => (
+          {(summary.serviceList ?? []).map((service, index) => (
             <ServiceItem key={index}>
               <ServiceName>{service.service}</ServiceName>
               <ServiceAmounts>
                 <AmountItem>
                   <AmountLabel>판매금액:</AmountLabel>
                   <AmountValue>
-                    {service.settlementFee.toLocaleString()}
+                    {(service.settlementFee ?? 0).toLocaleString()}
                   </AmountValue>
                 </AmountItem>
                 {isAdmin && (
                   <AmountItem>
                     <AmountLabel>유통수수료:</AmountLabel>
                     <AmountValue>
-                      {service.distributionFee.toLocaleString()}
+                      {(service.distributionFee ?? 0).toLocaleString()}
                     </AmountValue>
                   </AmountItem>
                 )}
                 <AmountItem>
                   <AmountLabel>정산금:</AmountLabel>
                   <AmountValue>
-                    {service.userSettlementFee.toLocaleString()}
+                    {(service.userSettlementFee ?? 0).toLocaleString()}
                   </AmountValue>
                 </AmountItem>
               </ServiceAmounts>

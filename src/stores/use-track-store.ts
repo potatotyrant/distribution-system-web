@@ -86,7 +86,7 @@ export const useTrackStore = create<TrackStore>()(
           }
 
           // 발매국가가 없는 경우 기본값으로 대한민국 설정
-          const fetchedTracks = response.data.trackList.map((track) => ({
+          const fetchedTracks = (response.data.trackList ?? []).map((track) => ({
             ...track,
             releaseCountryCode: track.releaseCountryCode || "KR",
           }));
