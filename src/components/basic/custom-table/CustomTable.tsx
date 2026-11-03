@@ -67,7 +67,7 @@ const HeaderCell = styled.th<{
   font-weight: 500;
   letter-spacing: -0.01em;
   text-transform: none;
-  font-size: 10px;
+  font-size: ${({ $size }) => ($size === "small" ? "12px" : "10px")};
   line-height: 1.4;
   color: ${theme.colors.gray[400]};
   padding: ${({ $size }) => ($size === "small" ? "12px" : "16px")} 24px;
@@ -281,7 +281,10 @@ const CustomTable = <T extends Record<string, any>>({
               </HeaderCell>
             ))}
             {expandable && (
-              <HeaderCell $width={expandable.expandColumnWidth ?? 40} />
+              <HeaderCell
+                $width={expandable.expandColumnWidth ?? 40}
+                $size={size}
+              />
             )}
           </tr>
         </TableHeader>
