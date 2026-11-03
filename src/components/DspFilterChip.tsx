@@ -17,6 +17,17 @@ const Container = styled.div`
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+
+  /* Chip gap was 4px. English names were mono; force Pretendard. */
+  > div {
+    gap: 12px;
+    font-family: var(--font-pretendard), Pretendard, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    text-transform: none;
+  }
 `;
 
 // DSP 타입 정의

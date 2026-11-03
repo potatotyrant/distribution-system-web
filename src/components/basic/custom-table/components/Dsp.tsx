@@ -10,7 +10,7 @@ interface DspProps {
 const DspContent = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 24px;
   justify-content: center;
 `;
 
@@ -24,7 +24,11 @@ const DspImage = styled.img`
 const DspInfo = styled.div`
   display: flex;
   flex-direction: column;
-  ${theme.fonts.body2.medium};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
   color: ${theme.colors.gray[800]};
 `;
 
