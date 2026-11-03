@@ -5,7 +5,7 @@ import CommunitySection from "./CommunitySection";
 import ContentSection from "./ContentSection";
 import ContractSection from "./ContractSection";
 import ServiceSection from "./ServiceSection";
-import audioguysLogoSrc from "@/assets/audioguys-logo";
+import audioguysLogo from "@/assets/audioguys-logo.png";
 import { layout, wordmarkMarginBottom } from "@/styles/layout-metrics";
 import styled from "styled-components";
 import { useAuthStore } from "@/stores/use-auth-store";
@@ -55,6 +55,10 @@ const Logo = styled.img`
   margin: 0 0 ${layout.logoGap}px;
   object-fit: contain;
   object-position: left center;
+  border: 0;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
 `;
 
 const BrandMark = styled.div`
@@ -82,7 +86,13 @@ export default function Sidebar() {
   return (
     <SidebarContainer>
       <Brand>
-        <Logo src={audioguysLogoSrc} alt="" aria-label="Audioguys" />
+        <Logo
+          src={audioguysLogo.src}
+          width={audioguysLogo.width}
+          height={audioguysLogo.height}
+          alt=""
+          aria-label="Audioguys"
+        />
         <BrandMark>
           Audioguys for Artists<TradeMark>™</TradeMark>
         </BrandMark>
