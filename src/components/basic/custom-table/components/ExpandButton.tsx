@@ -33,8 +33,8 @@ const ExpandButton = ({ isExpanded, onClick }: ExpandButtonProps) => {
   return (
     <Button $isExpanded={isExpanded} onClick={onClick}>
       <ArrowDownIcon
-        width={18}
-        height={18}
+        width={13.5}
+        height={13.5}
         color={isExpanded ? theme.colors.purple[600] : theme.colors.gray[500]}
       />
     </Button>

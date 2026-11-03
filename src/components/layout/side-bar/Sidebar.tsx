@@ -42,6 +42,8 @@ const Brand = styled.div`
   display: flex;
   align-items: center;
   padding: 8px 0 12px;
+  /* Drops the first menu row so its top matches the page title at 1440px. */
+  margin-bottom: 44.66px;
 `;
 
 const BrandMark = styled.div`

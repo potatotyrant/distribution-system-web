@@ -98,14 +98,14 @@ const CollapsibleTrackHeader: React.FC<CollapsibleTrackHeaderProps> = ({
           {isOpen ? (
             <ArrowUpIcon
               color={theme.colors.purple[600]}
-              width={18}
-              height={18}
+              width={13.5}
+              height={13.5}
             />
           ) : (
             <ArrowDownIcon
               color={theme.colors.purple[600]}
-              width={18}
-              height={18}
+              width={13.5}
+              height={13.5}
             />
           )}
         </IconWrapper>
