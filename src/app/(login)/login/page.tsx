@@ -1,5 +1,6 @@
 "use client";
 
+import { PREVIEW_MODE } from "@/constants/preview";
 import { AuthLevel } from "@/types/user";
 import LoginForm from "./components/LoginForm";
 import styled from "styled-components";
@@ -52,6 +53,7 @@ export default function LoginPage() {
   const isHydrated = useAuthStore((state) => state.isHydrated);
 
   useEffect(() => {
+    if (PREVIEW_MODE) return;
     if (isHydrated && user) {
       if (user.authLevel === AuthLevel.ADMIN) {
         router.push("/contract/dsp/list");
