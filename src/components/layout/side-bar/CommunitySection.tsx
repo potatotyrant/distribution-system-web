@@ -23,7 +23,11 @@ const CommunitySection = () => {
     <Container>
       <MenuGroupButton onClick={() => setIsOpen(!isOpen)}>
         커뮤니티
-        {isOpen ? <ArrowUpIcon /> : <ArrowDownIcon />}
+        {isOpen ? (
+          <ArrowUpIcon width={14} height={14} />
+        ) : (
+          <ArrowDownIcon width={14} height={14} />
+        )}
       </MenuGroupButton>
       <Gap height={12} />
       <MenuGroup $isOpen={isOpen}>

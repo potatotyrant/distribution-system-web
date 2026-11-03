@@ -5,6 +5,7 @@ import ArrowRightIcon from "./icons/ArrowRightIcon";
 import Link from "next/link";
 import LoginInfo from "./LoginInfo";
 import React from "react";
+import { layout } from "@/styles/layout-metrics";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
 
@@ -16,9 +17,10 @@ const Container = styled.div`
   gap: 24px;
   background: #fafafa;
   color: #0a0a0a;
-  padding: 18px 60px;
+  height: ${layout.topBarHeight}px;
+  padding: 0 60px;
   border-bottom: 1px solid #eaeaea;
-  min-height: 76px;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     padding: 16px 0;

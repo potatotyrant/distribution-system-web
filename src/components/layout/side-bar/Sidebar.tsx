@@ -5,6 +5,7 @@ import CommunitySection from "./CommunitySection";
 import ContentSection from "./ContentSection";
 import ContractSection from "./ContractSection";
 import ServiceSection from "./ServiceSection";
+import { layout, wordmarkMarginBottom } from "@/styles/layout-metrics";
 import styled from "styled-components";
 import { useAuthStore } from "@/stores/use-auth-store";
 
@@ -14,12 +15,12 @@ const SidebarContainer = styled.nav`
   width: 320px;
   background-color: #0a0a0a;
   color: #fafafa;
-  padding: 28px 24px 48px;
+  padding: ${layout.sidebarPaddingTop}px 24px 48px;
   position: fixed;
   height: 100vh;
   overflow-y: auto;
   border-right: 1px solid #2a2a2a;
-  gap: 28px;
+  gap: ${layout.sidebarGap}px;
 
   &::-webkit-scrollbar-track {
     background: #0a0a0a;
@@ -41,16 +42,15 @@ const SidebarContainer = styled.nav`
 const Brand = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px 0 12px;
-  /* Drops the first menu row so its top matches the page title at 1440px. */
-  margin-bottom: 44.66px;
+  padding: ${layout.wordmarkPaddingTop}px 0 ${layout.wordmarkPaddingBottom}px;
+  margin-bottom: ${wordmarkMarginBottom}px;
 `;
 
 const BrandMark = styled.div`
   font-family: "Recital", serif;
   font-weight: 400;
-  font-size: 19.5px;
-  line-height: 1.3;
+  font-size: ${layout.wordmarkFontSize}px;
+  line-height: ${layout.wordmarkLineHeight};
   letter-spacing: -0.02em;
   color: #fafafa;
   white-space: nowrap;

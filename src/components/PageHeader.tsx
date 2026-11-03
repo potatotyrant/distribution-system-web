@@ -1,8 +1,9 @@
+import { layout } from "@/styles/layout-metrics";
 import styled from "styled-components";
 import theme from "@/styles/theme";
 
 const HeaderContainer = styled.div`
-  padding: 42px 0;
+  padding: ${layout.pageHeaderPaddingTop}px 0;
   display: flex;
   align-items: center;
   gap: 16px;
