@@ -18,7 +18,7 @@ export const layout = {
    */
   logoWidth: 214,
   logoHeight: 55.64,
-  logoGap: 32,
+  logoGap: 57,
 } as const;
 
 /** Distance from the wordmark's bottom edge to the first menu row. */
