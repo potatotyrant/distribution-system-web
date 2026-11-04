@@ -51,7 +51,7 @@ const PanelPhoto = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 42% 60%;
+  object-position: 42% 68%;
   border: 0;
   pointer-events: none;
 `;
