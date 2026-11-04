@@ -59,7 +59,7 @@ const HeaderCell = styled.th<{
   font-weight: 500;
   letter-spacing: -0.01em;
   text-transform: none;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.4;
   color: ${theme.colors.gray[400]};
   padding: ${({ $size }) => ($size === "small" ? "12px" : "16px")} 24px;
