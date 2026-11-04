@@ -1,7 +1,6 @@
 /**
- * Shared vertical rhythm for the top bar, the page title, and the first
- * sidebar row. The first menu item's top is this sum, so it stays aligned
- * with the page heading without a one-off pixel nudge.
+ * Shared vertical rhythm for the top bar and the page title.
+ * The first sidebar row follows the wordmark instead of matching the title.
  */
 export const layout = {
   topBarHeight: 96,
@@ -19,22 +18,13 @@ export const layout = {
    */
   logoWidth: 214,
   logoHeight: 55.64,
-  logoGap: 16,
+  logoGap: 32,
 } as const;
 
-export const pageTitleTop =
-  layout.topBarHeight +
-  layout.contentPaddingTop +
-  layout.pageHeaderPaddingTop;
+/** Distance from the wordmark's bottom edge to the first menu row. */
+export const wordmarkToMenuGap = 13.01;
 
-const wordmarkBlockHeight =
-  layout.wordmarkPaddingTop +
-  layout.logoHeight +
-  layout.logoGap +
-  layout.wordmarkFontSize * layout.wordmarkLineHeight +
-  layout.wordmarkPaddingBottom;
-
-/** Extra space under the wordmark so the first menu row starts at pageTitleTop. */
 export const wordmarkMarginBottom =
-  pageTitleTop -
-  (layout.sidebarPaddingTop + wordmarkBlockHeight + layout.sidebarGap);
+  wordmarkToMenuGap -
+  layout.wordmarkPaddingBottom -
+  layout.sidebarGap;
