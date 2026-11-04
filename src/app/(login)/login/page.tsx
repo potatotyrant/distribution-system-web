@@ -82,8 +82,9 @@ const PanelTitle = styled.h2`
 const TradeMark = styled.span`
   font-family: var(--font-pretendard), Pretendard, sans-serif;
   font-weight: 400;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 33px;
+  line-height: 1;
+  vertical-align: super;
   color: inherit;
 `;
 
