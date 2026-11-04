@@ -13,10 +13,13 @@ export const layout = {
   wordmarkLineHeight: 1.3,
   wordmarkPaddingBottom: 12,
   sidebarGap: 28,
-  /** 500×130 mark. 120px keeps the first menu row on the page title. */
-  logoWidth: 120,
-  logoHeight: 31.2,
-  logoGap: 8,
+  /**
+   * 500×130 mark, about 8% wider than the rendered wordmark (~197px)
+   * and still inside the 272px sidebar content width.
+   */
+  logoWidth: 214,
+  logoHeight: 55.64,
+  logoGap: 16,
 } as const;
 
 export const pageTitleTop =
