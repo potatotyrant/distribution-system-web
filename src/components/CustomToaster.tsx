@@ -45,16 +45,15 @@ export default function CustomToaster() {
               gap: "12px",
               background: "white",
               padding: "16px",
-              borderRadius: "8px",
-              boxShadow:
-                "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+              borderRadius: "2px",
+              boxShadow: "none",
               maxWidth: "500px",
               border:
                 t.type === "success"
-                  ? "1px solid #10b981"
+                  ? "1px solid #4fe699"
                   : t.type === "error"
-                  ? "1px solid #ef4444"
-                  : "1px solid #e5e7eb",
+                  ? "1px solid #e5484d"
+                  : "1px solid #eaeaea",
             }}
           >
             {/* 아이콘 */}
@@ -64,7 +63,7 @@ export default function CustomToaster() {
                   width: "20px",
                   height: "20px",
                   borderRadius: "50%",
-                  background: "#10b981",
+                  background: "#0e9a56",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -94,7 +93,7 @@ export default function CustomToaster() {
                   width: "20px",
                   height: "20px",
                   borderRadius: "50%",
-                  background: "#ef4444",
+                  background: "#e5484d",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -123,7 +122,7 @@ export default function CustomToaster() {
               style={{
                 flex: 1,
                 fontSize: "14px",
-                color: "#374151",
+                color: "#1a1a1a",
                 whiteSpace: "pre-line",
               }}
             >
@@ -163,7 +162,7 @@ export default function CustomToaster() {
                 >
                   <path
                     d="M4 4L12 12M12 4L4 12"
-                    stroke="#6b7280"
+                    stroke="#6a6a6a"
                     strokeWidth="2"
                     strokeLinecap="round"
                   />

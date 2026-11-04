@@ -35,7 +35,7 @@ const FileInput = styled.input`
 const FileLabel = styled.label`
   width: 200px;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: ${theme.colors.gray[100]};
   color: ${theme.colors.gray[600]};
   cursor: pointer;
@@ -50,7 +50,7 @@ const FileLabel = styled.label`
 const Button = styled.button`
   width: 200px;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: ${theme.colors.black};
   color: ${theme.colors.white};
   cursor: pointer;
@@ -79,7 +79,7 @@ const DeleteButton = styled.button`
   background-color: ${theme.colors.red[500]};
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 2px;
   cursor: pointer;
   ${theme.fonts.body2.regular};
 
@@ -104,7 +104,7 @@ const DeleteConfirmPopup = styled.div`
 const DeleteConfirmContent = styled.div`
   background-color: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 2px;
   width: 300px;
   text-align: center;
 `;

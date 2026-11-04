@@ -79,7 +79,7 @@ const SearchInput = styled.input<{
   width: 100%;
 
   &::placeholder {
-    color: ${theme.colors.gray[300]};
+    color: #cacaca;
   }
 `;
 
@@ -109,8 +109,8 @@ const IconContainer = styled.div<{ $size?: "small" | "normal" }>`
   align-items: center;
 
   svg {
-    width: ${({ $size }) => ($size === "small" ? "18px" : "24px")};
-    height: ${({ $size }) => ($size === "small" ? "18px" : "24px")};
+    width: ${({ $size }) => ($size === "small" ? "13.5px" : "18px")};
+    height: ${({ $size }) => ($size === "small" ? "13.5px" : "18px")};
   }
 `;
 

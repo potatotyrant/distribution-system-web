@@ -69,7 +69,7 @@ export default function VideoLicensorSearch({
     <Container>
       <Title>
         권리자명
-        {required && <span style={{ color: "#DC2626" }}> *</span>}
+        {required && <span style={{ color: "#d0313a" }}> *</span>}
       </Title>
       <Gap height={20} />
       {!readOnly && (

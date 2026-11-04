@@ -31,10 +31,17 @@ const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  flex-shrink: 0;
+  width: 16.8px;
+  height: 16.8px;
   border-radius: 50%;
   border: 1px solid ${theme.colors.purple[600]}; /* purple600 */
+
+  svg {
+    width: 9.6px;
+    height: 9.6px;
+    flex-shrink: 0;
+  }
 `;
 
 const ContentWrapper = styled.div<{ $isOpen: boolean }>`
@@ -98,14 +105,14 @@ const CollapsibleTrackHeader: React.FC<CollapsibleTrackHeaderProps> = ({
           {isOpen ? (
             <ArrowUpIcon
               color={theme.colors.purple[600]}
-              width={18}
-              height={18}
+              width={9.6}
+              height={9.6}
             />
           ) : (
             <ArrowDownIcon
               color={theme.colors.purple[600]}
-              width={18}
-              height={18}
+              width={9.6}
+              height={9.6}
             />
           )}
         </IconWrapper>

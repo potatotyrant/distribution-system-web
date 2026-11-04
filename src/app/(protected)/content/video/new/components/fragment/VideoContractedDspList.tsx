@@ -82,7 +82,7 @@ export default function VideoContractedDspList({
       <Label>
         {required ? "계약된 DSP 리스트" : "계약된 DSP 리스트"}:{" "}
         {dspContractIdList.length}개 선택됨
-        {required && <span style={{ color: "#DC2626" }}> *</span>}
+        {required && <span style={{ color: "#d0313a" }}> *</span>}
       </Label>
       {!contractedDspContractList || contractedDspContractList.length === 0 ? (
         <HelpText>

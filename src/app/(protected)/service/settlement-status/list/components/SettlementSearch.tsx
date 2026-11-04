@@ -30,7 +30,7 @@ const DateDash = styled.div`
   height: 1.5px;
   width: 16px;
   background-color: ${theme.colors.gray[500]};
-  border-radius: 10px;
+  border-radius: 2px;
 `;
 
 export default function SettlementSearch() {

@@ -15,13 +15,14 @@ const Container = styled.div`
 const Button = styled.button`
   width: 200px;
   padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
+  border-radius: 999px;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  border: 1px solid #3a3a3a;
   cursor: pointer;
 
   &:disabled {
-    background-color: #666;
+    background-color: #3a3a3a;
     cursor: not-allowed;
   }
 `;
@@ -33,22 +34,22 @@ const FileInput = styled.input`
 const FileLabel = styled.label`
   width: 200px;
   padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  color: #333;
+  border-radius: 2px;
+  background-color: #fafafa;
+  color: #1a1a1a;
   cursor: pointer;
   text-align: center;
-  border: 2px dashed #ccc;
+  border: 1px dashed #cacaca;
 
   &:hover {
-    background-color: #e0e0e0;
+    background-color: #f6f6f6;
   }
 `;
 
 const SelectedFileName = styled.div`
   margin-top: 8px;
   font-size: 14px;
-  color: #666;
+  color: #6a6a6a;
 `;
 
 const ErrorMessage = styled.div`

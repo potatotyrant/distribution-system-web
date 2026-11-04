@@ -26,14 +26,7 @@ const ButtonWrapper = styled.button<{
     }
   }};
   border: none;
-  border-radius: ${(props) => {
-    switch (props.$size) {
-      case "small":
-        return "6px";
-      default:
-        return "8px";
-    }
-  }};
+  border-radius: 8px;
   background-color: transparent;
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
   display: flex;

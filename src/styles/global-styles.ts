@@ -12,34 +12,31 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     width: 100%;
     height: 100%;
-    font-family: var(--font-pretendard);
-    line-height: 1.5;
+    font-family: var(--font-pretendard), Pretendard, sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFFFFF;
-    color: #333333;
-
+    background-color: #fafafa;
+    color: #1a1a1a;
     font-synthesis: none;
   }
 
-     /* Next.js 루트 컨테이너 스타일 */
   #__next {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 화면 세로 전체 사용 */
-    max-width: 1440px; /* 기본 폭 */
-    margin: 0 auto; /* 가운데 정렬 */
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
-  /* 반응형 스타일 */
   @media (max-width: 768px) {
     #__next {
-      max-width: 100%; /* 화면 크기에 맞게 */
-      padding: 0 16px; /* 모바일 간격 조정 */
+      max-width: 100%;
+      padding: 0 16px;
     }
   }
 
-  /* 기본 요소 스타일 */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: inherit;
@@ -62,19 +59,89 @@ export const GlobalStyles = createGlobalStyle`
     background: none;
     border: none;
     cursor: pointer;
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, opacity 180ms ease;
   }
 
-  /* 스크롤바 스타일 (선택 사항) */
+  :focus-visible {
+    outline: 1px solid #f2592a;
+    outline-offset: 2px;
+  }
+
   ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #f0f0f0;
+    background: #f6f6f6;
   }
   ::-webkit-scrollbar-thumb {
-    background: #b0b0b0;
-    border-radius: 4px;
+    background: #cacaca;
+    border-radius: 0;
   }
 
+  .react-datepicker {
+    font-family: var(--font-pretendard), Pretendard, sans-serif;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #1a1a1a;
+  }
+
+  .react-datepicker__header {
+    background: #fafafa;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .react-datepicker__day,
+  .react-datepicker__day-name,
+  .react-datepicker__current-month {
+    color: #1a1a1a;
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__time-list-item--selected {
+    background-color: #0a0a0a !important;
+    color: #fafafa !important;
+    border-radius: 2px;
+  }
+
+  .react-datepicker__day:hover,
+  .react-datepicker__time-list-item:hover {
+    border-radius: 2px;
+    background-color: #f3f3f3;
+  }
+
+  .react-datepicker__triangle {
+    display: none;
+  }
+
+  .ReactModal__Overlay {
+    background-color: rgba(10, 10, 10, 0.72) !important;
+  }
+
+  .ReactModal__Content {
+    border: 1px solid #eaeaea !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  .ql-toolbar.ql-snow,
+  .ql-container.ql-snow {
+    border-color: #eaeaea !important;
+  }
+
+  .ql-snow .ql-stroke {
+    stroke: #3a3a3a;
+  }
+
+  .ql-snow .ql-fill {
+    fill: #3a3a3a;
+  }
+
+  .ql-editor {
+    font-family: var(--font-pretendard), Pretendard, sans-serif;
+    color: #1a1a1a;
+  }
 `;
 export default GlobalStyles;

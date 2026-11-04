@@ -9,10 +9,12 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  border: 1px solid ${theme.colors.gray[50]};
-  border-radius: 8px;
-  padding: 12px 16px;
+  gap: 16px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 8px 8px 8px 14px;
+  background: #0a0a0a;
+  flex-shrink: 0;
 `;
 
 const UserInfoWrapper = styled.div`
@@ -23,13 +25,18 @@ const UserInfoWrapper = styled.div`
 `;
 
 const UserInfoLabel = styled.div`
-  ${theme.fonts.label2.medium};
-  color: ${theme.colors.gray[500]};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-transform: none;
+  color: #8a8a8a;
 `;
 
 const UserName = styled.div`
-  ${theme.fonts.heading2.medium};
-  color: ${theme.colors.gray[800]};
+  ${theme.fonts.body1.medium};
+  color: #fafafa;
 `;
 
 const LoginInfo = () => {

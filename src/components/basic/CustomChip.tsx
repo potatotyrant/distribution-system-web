@@ -39,10 +39,17 @@ const ChipContainer = styled.div<{
   align-items: center;
   justify-content: center;
   gap: 4px;
-  ${theme.fonts.body2.medium};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-transform: none;
   color: ${theme.colors.gray[800]};
-  border: 1px solid ${theme.colors.gray[50]};
-  border-radius: 100px;
+  border: 1px solid
+    ${({ $isSelected }) =>
+      $isSelected ? theme.colors.purple[600] : theme.colors.gray[50]};
+  border-radius: 2px;
   width: fit-content;
   min-width: min-content;
   white-space: nowrap;

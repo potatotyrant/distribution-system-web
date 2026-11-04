@@ -26,7 +26,7 @@ const Label = styled.div`
 const SearchButton = styled.div`
   width: 320px;
   height: 42px;
-  border-radius: 6px;
+  border-radius: 2px;
   padding-left: 12px;
   padding-right: 8px;
   border: 1px solid ${theme.colors.gray[50]};

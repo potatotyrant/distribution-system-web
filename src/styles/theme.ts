@@ -1,287 +1,296 @@
 const theme = {
   colors: {
-    black: "#000000",
+    black: "#0a0a0a",
     white: "#FFFFFF",
     gray: {
-      25: "#F4F4F5",
-      50: "#E0E0E6",
-      100: "#C3C7CF",
-      // 200: "#ADB1BB",
-      300: "#9096A3",
-      400: "#70737C",
-      500: "#555A67",
-      600: "#37393F",
-      // 700: "#2E2F33",
-      800: "#212225",
-      // 900: "#151617",
+      25: "#f6f6f6",
+      50: "#eaeaea",
+      100: "#cacaca",
+      // 200: "#b0b0b0",
+      300: "#8a8a8a",
+      400: "#6a6a6a",
+      500: "#4a4a4a",
+      600: "#3a3a3a",
+      // 700: "#2a2a2a",
+      800: "#1a1a1a",
+      // 900: "#0a0a0a",
     },
+    // Key name kept. Values are the Audioguys orange accent (was purple).
     purple: {
-      50: "#F0ECFE",
-      100: "#DBD3FE",
-      // 200: "#C0B0FF",
-      // 300: "#9E86FC",
-      // 400: "#7D5EF7",
-      // 500: "#6541F2",
-      600: "#4F29E5",
-      700: "#3A16C9",
-      800: "#23098F",
-      // 900: "#11024D",
+      50: "#fff1eb",
+      100: "#ffd8c8",
+      // 200: "#ffb59a",
+      // 300: "#ff8d66",
+      // 400: "#ff7043",
+      // 500: "#f2592a",
+      600: "#f2592a",
+      700: "#d4461b",
+      800: "#a33312",
+      // 900: "#6e210c",
     },
     red: {
-      50: "#FEECEF",
-      // 100: "#FFDADF",
-      // 200: "#FFC2CB",
-      300: "#FF9CAA",
-      400: "#F6697D",
-      500: "#F54C64",
-      600: "#EB2743",
-      // 700: "#DB1733",
-      // 800: "#C10F29",
+      50: "#fff0f1",
+      // 100: "#ffd6da",
+      // 200: "#ffb3bb",
+      300: "#ff9caa",
+      400: "#f47c8c",
+      500: "#e5484d",
+      600: "#d0313a",
+      // 700: "#b4232c",
+      // 800: "#8f1820",
     },
     green: {
-      // 50: "#F2FFF9",
-      100: "#D7FFEB",
-      // 200: "#66E1A0",
-      // 300: "#2FD181",
-      // 400: "#1DB469",
-      // 500: "#0A9952",
-      600: "#048746",
-      // 700: "#036A37",
-      // 800: "#02542B",
+      // 50: "#f3fff8",
+      100: "#e7fff4",
+      // 200: "#b6f5d4",
+      // 300: "#4fe699",
+      // 400: "#2ed889",
+      // 500: "#14b56a",
+      600: "#0e9a56",
+      // 700: "#0b7a44",
+      // 800: "#085c34",
     },
     blue: {
-      50: "#E8EDFF",
-      // 100: "#B4C4FF",
-      // 200: "#94ABFF",
-      // 300: "#6E8EFF",
-      // 400: "#4A72FF",
-      500: "#1B4DFF",
-      600: "#0F3CD9",
-      // 700: "#042BB2",
-      // 800: "#042185",
+      50: "#eef2ff",
+      // 100: "#d5defc",
+      // 200: "#b7c6fb",
+      // 300: "#8aa4f8",
+      // 400: "#5d82f5",
+      500: "#2f5bff",
+      600: "#1d3fd6",
+      // 700: "#1632a8",
+      // 800: "#102478",
     },
   },
   fonts: {
     title1: {
       semibold: `
         font-size: 28px;
-        line-height: 36px; /* 1.3 */
-        letter-spacing: -0.02em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 28px;
-        line-height: 36px; /* 1.3 */
-        letter-spacing: -0.02em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 28px;
-        line-height: 36px; /* 1.3 */
-        letter-spacing: -0.02em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     title2: {
       semibold: `
         font-size: 24px;
-        line-height: 32px; /* 1.3 */
-        letter-spacing: -0.02em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 24px;
-        line-height: 32px; /* 1.3 */
-        letter-spacing: -0.02em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 24px;
-        line-height: 32px; /* 1.3 */
-        letter-spacing: -0.02em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     heading1: {
       semibold: `
         font-size: 22px;
-        line-height: 30px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 22px;
-        line-height: 30px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 22px;
-        line-height: 30px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     heading2: {
       semibold: `
         font-size: 20px;
-        line-height: 28px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 20px;
-        line-height: 28px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 20px;
-        line-height: 28px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     heading3: {
       semibold: `
         font-size: 18px;
-        line-height: 26px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 18px;
-        line-height: 26px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 18px;
-        line-height: 26px; /* 1.4 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     heading4: {
       semibold: `
         font-size: 17px;
-        line-height: 24px; /* 1.5 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 17px;
-        line-height: 24px; /* 1.5 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 17px;
-        line-height: 24px; /* 1.5 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     body1: {
       semibold: `
         font-size: 16px;
-        line-height: 24px; /* 1.5 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 16px;
-        line-height: 24px; /* 1.5 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 16px;
-        line-height: 24px; /* 1.5 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     body2: {
       semibold: `
         font-size: 15px;
-        line-height: 22px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 15px;
-        line-height: 22px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 15px;
-        line-height: 22px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     label1: {
       semibold: `
         font-size: 14px;
-        line-height: 20px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 14px;
-        line-height: 20px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 14px;
-        line-height: 20px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     label2: {
       semibold: `
         font-size: 13px;
-        line-height: 18px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 13px;
-        line-height: 18px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 13px;
-        line-height: 18px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
     caption1: {
       semibold: `
         font-size: 12px;
-        line-height: 16px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 600;
       `,
       medium: `
         font-size: 12px;
-        line-height: 16px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 500;
       `,
       regular: `
         font-size: 12px;
-        line-height: 16px; /* 1.6 */
-        letter-spacing: 0em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
         font-weight: 400;
       `,
     },
+    // Regular only. MD System Mono has no Hangul, so Korean glyphs fall through to Pretendard.
+    mono: `
+      font-family: "MD System Mono", "Fragment Mono", ui-monospace, monospace, var(--font-pretendard), sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    `,
   },
 };
 

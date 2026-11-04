@@ -97,8 +97,7 @@ const TextArea = styled.textarea<{
   `}
 
   &::placeholder {
-    color: ${({ $disabled }) =>
-      $disabled ? theme.colors.gray[100] : theme.colors.gray[300]};
+    color: #cacaca;
     font-feature-settings: "ss10" on;
     ${theme.fonts.body1.regular}
   }

@@ -15,9 +15,10 @@ const ButtonWrapper = styled.button<{
   $size?: "large" | "medium" | "small";
   $expand?: boolean;
 }>`
-  border: none;
+  border: 1px solid
+    ${(props) => (props.$disabled ? theme.colors.gray[50] : "#2a2a2a")};
   background-color: ${(props) =>
-    props.$disabled ? theme.colors.white : theme.colors.purple[600]};
+    props.$disabled ? theme.colors.white : "#0a0a0a"};
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
   display: flex;
   align-items: center;
@@ -40,25 +41,16 @@ const ButtonWrapper = styled.button<{
         return "40px";
     }
   }};
-  border-radius: ${(props) => {
-    switch (props.$size) {
-      case "medium":
-        return "8px";
-      case "small":
-        return "6px";
-      default:
-        return "10px";
-    }
-  }};
+  border-radius: 8px;
 
   &:hover {
     background-color: ${(props) =>
-      props.$disabled ? theme.colors.white : theme.colors.purple[700]};
+      props.$disabled ? theme.colors.white : "#1a1a1a"};
   }
 
   &:active {
     background-color: ${(props) =>
-      props.$disabled ? theme.colors.white : theme.colors.purple[800]};
+      props.$disabled ? theme.colors.white : "#2a2a2a"};
   }
 `;
 

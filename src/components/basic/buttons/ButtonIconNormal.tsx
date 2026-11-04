@@ -39,16 +39,7 @@ const ButtonWrapper = styled.button<{
         return "40px";
     }
   }};
-  border-radius: ${(props) => {
-    switch (props.$size) {
-      case "medium":
-        return "8px";
-      case "small":
-        return "6px";
-      default:
-        return "10px";
-    }
-  }};
+  border-radius: 8px;
 
   &:hover {
     background-color: ${theme.colors.gray[25]};

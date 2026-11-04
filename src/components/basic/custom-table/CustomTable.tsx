@@ -40,9 +40,10 @@ interface CustomTableProps<T> {
 
 const TableContainer = styled.div`
   width: 100%;
-  border: none;
-  border-radius: 0;
+  border: 1px solid ${theme.colors.gray[50]};
+  border-radius: 2px;
   overflow: visible;
+  background: ${theme.colors.white};
 `;
 
 const Table = styled.table`
@@ -62,8 +63,12 @@ const HeaderCell = styled.th<{
   $align?: "left" | "center" | "right";
   $size?: "small" | "normal";
 }>`
-  ${({ $size }) =>
-    $size === "small" ? theme.fonts.body2.medium : theme.fonts.body1.medium}
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.4;
   color: ${theme.colors.gray[400]};
   padding: ${({ $size }) => ($size === "small" ? "12px" : "16px")} 24px;
   text-align: ${({ $align }) => $align || "center"};
@@ -276,7 +281,10 @@ const CustomTable = <T extends Record<string, any>>({
               </HeaderCell>
             ))}
             {expandable && (
-              <HeaderCell $width={expandable.expandColumnWidth ?? 40} />
+              <HeaderCell
+                $width={expandable.expandColumnWidth ?? 40}
+                $size={size}
+              />
             )}
           </tr>
         </TableHeader>

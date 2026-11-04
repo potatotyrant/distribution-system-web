@@ -36,7 +36,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    borderRadius: "8px",
+    borderRadius: "2px",
     padding: "16px 20px",
   },
   overlay: {
@@ -65,7 +65,7 @@ const FileItem = styled.div`
   gap: 12px;
   padding: 12px;
   border: 1px solid ${theme.colors.gray[100]};
-  border-radius: 8px;
+  border-radius: 2px;
   background-color: ${theme.colors.white};
 `;
 
@@ -310,7 +310,7 @@ export default function SettlementFileListModal({
             bottom: "auto",
             marginRight: "-50%",
             transform: "translate(-50%, -50%)",
-            borderRadius: "8px",
+            borderRadius: "2px",
             padding: "24px",
           },
           overlay: {

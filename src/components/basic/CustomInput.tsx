@@ -92,8 +92,7 @@ const Input = styled.input<{
 
   &::placeholder {
     overflow: hidden;
-    color: ${({ $disabled }) =>
-      $disabled ? theme.colors.gray[100] : theme.colors.gray[500]};
+    color: #cacaca;
     font-feature-settings: "ss10" on;
     text-overflow: ellipsis;
 

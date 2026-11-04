@@ -26,7 +26,7 @@ const EmptySNS = ({ width = 24, height = 24 }: EmptySNSProps) => {
             cx="12"
             cy="12"
             r="11"
-            stroke="#E0E0E6"
+            stroke="#eaeaea"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeDasharray="2 4"

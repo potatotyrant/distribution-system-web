@@ -5,8 +5,8 @@ import ArrowRightIcon from "./icons/ArrowRightIcon";
 import Link from "next/link";
 import LoginInfo from "./LoginInfo";
 import React from "react";
+import { layout } from "@/styles/layout-metrics";
 import styled from "styled-components";
-import theme from "@/styles/theme";
 import { usePathname } from "next/navigation";
 
 const Container = styled.div`
@@ -14,22 +14,53 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 24px;
+  background: #fafafa;
+  color: #0a0a0a;
+  height: ${layout.topBarHeight}px;
+  padding: 0 60px;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 16px 0;
+    flex-wrap: wrap;
+  }
 `;
 
 const BreadcrumbWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  min-width: 0;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    display: block;
+  }
+
+  svg path {
+    stroke: #8a8a8a;
+  }
 `;
 
 const PrevBreadcrumb = styled.div`
-  ${theme.fonts.heading2.regular};
-  color: ${theme.colors.gray[300]};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #8a8a8a;
 `;
 
 const CurrentBreadcrumb = styled.div`
-  ${theme.fonts.heading2.medium};
-  color: ${theme.colors.gray[800]};
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
 `;
 
 const Breadcrumbs = () => {
@@ -41,11 +72,11 @@ const Breadcrumbs = () => {
       return (
         <BreadcrumbWrapper>
           <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <PrevBreadcrumb>앨범</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <PrevBreadcrumb>리스트 조회</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <CurrentBreadcrumb>상세</CurrentBreadcrumb>
         </BreadcrumbWrapper>
       );
@@ -55,11 +86,11 @@ const Breadcrumbs = () => {
       return (
         <BreadcrumbWrapper>
           <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <PrevBreadcrumb>영상</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <PrevBreadcrumb>리스트 조회</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <CurrentBreadcrumb>상세</CurrentBreadcrumb>
         </BreadcrumbWrapper>
       );
@@ -69,9 +100,9 @@ const Breadcrumbs = () => {
       return (
         <BreadcrumbWrapper>
           <PrevBreadcrumb>커뮤니티</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <PrevBreadcrumb>공지사항</PrevBreadcrumb>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={12} height={12} />
           <CurrentBreadcrumb>상세</CurrentBreadcrumb>
         </BreadcrumbWrapper>
       );
@@ -82,9 +113,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>계약 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>DSP</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>리스트 조회/등록</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -92,9 +123,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>계약 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>권리자</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>리스트 조회/등록</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -102,9 +133,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>계약 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>권리자</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>계약 정보 조회/등록</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -113,9 +144,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>앨범</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>리스트 조회</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -124,9 +155,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>앨범</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>신규 앨범 등록</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -135,9 +166,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>영상 </PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>리스트 조회</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -146,9 +177,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>영상 </PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>신규 영상 등록</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -157,9 +188,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>콘텐츠 관리</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>아티스트</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>아티스트 관리</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -168,9 +199,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>서비스 현황</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>정산 현황</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>정산금 조회</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -179,9 +210,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>서비스 현황</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>정산 현황</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>상세내역 조회</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -190,9 +221,9 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>서비스 현황</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <PrevBreadcrumb>관리자 정산</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>유통 정산 현황</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );
@@ -201,7 +232,7 @@ const Breadcrumbs = () => {
         return (
           <BreadcrumbWrapper>
             <PrevBreadcrumb>커뮤니티</PrevBreadcrumb>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={12} height={12} />
             <CurrentBreadcrumb>공지사항</CurrentBreadcrumb>
           </BreadcrumbWrapper>
         );

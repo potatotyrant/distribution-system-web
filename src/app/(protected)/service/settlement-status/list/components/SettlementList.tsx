@@ -44,20 +44,20 @@ const DetailButton = styled.button<{ $isExpanded: boolean }>`
 
 const ArrowIcon = styled.span`
   font-size: 12px;
-  color: #6b7280;
+  color: #6a6a6a;
 `;
 
 const ExpandedContent = styled.div`
   padding: 20px;
-  background-color: #f9fafb;
-  border-top: 1px solid #e5e7eb;
+  background-color: #fafafa;
+  border-top: 1px solid #eaeaea;
 `;
 
 const ExpandedTitle = styled.h4`
   margin: 0 0 16px 0;
   font-size: 16px;
   font-weight: 600;
-  color: #374151;
+  color: #1a1a1a;
 `;
 
 const ServiceList = styled.div`
@@ -72,13 +72,13 @@ const ServiceItem = styled.div`
   align-items: center;
   padding: 12px 16px;
   background-color: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
 `;
 
 const ServiceName = styled.span`
   font-weight: 600;
-  color: #374151;
+  color: #1a1a1a;
   min-width: 120px;
 `;
 
@@ -95,17 +95,17 @@ const AmountItem = styled.div`
 
 const AmountLabel = styled.span`
   font-size: 14px;
-  color: #6b7280;
+  color: #6a6a6a;
 `;
 
 const AmountValue = styled.span`
   font-weight: 600;
-  color: #374151;
+  color: #1a1a1a;
 `;
 
 const ExpandedRow = styled.div`
-  background-color: #f9fafb;
-  border-top: 1px solid #e5e7eb;
+  background-color: #fafafa;
+  border-top: 1px solid #eaeaea;
 `;
 
 export default function SettlementList() {

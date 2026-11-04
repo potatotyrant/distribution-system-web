@@ -13,10 +13,29 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 320px;
+  max-width: 100%;
+  color: #0a0a0a;
+
+  label {
+    color: #0a0a0a;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+
+    > div > div {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  }
 `;
 
 const Title = styled.h1`
   ${theme.fonts.title1.semibold};
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
 `;
 
 export default function LoginForm() {

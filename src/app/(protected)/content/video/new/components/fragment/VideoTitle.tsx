@@ -115,8 +115,8 @@ export default function VideoTitle({
 
   return (
     <Container>
-      <div style={{ fontWeight: "500", color: "#374151" }}>
-        영상명 <span style={{ color: "#DC2626" }}>*</span>
+      <div style={{ fontWeight: "500", color: "#1a1a1a" }}>
+        영상명 <span style={{ color: "#d0313a" }}>*</span>
       </div>
       <CustomTable columns={columns} data={value || []} size="small" />
       <Gap height={12} />

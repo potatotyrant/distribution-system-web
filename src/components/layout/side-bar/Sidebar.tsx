@@ -1,39 +1,82 @@
-"use client"; // 이벤트 핸들링 등 클라이언트 컴포넌트 기능 사용 시
+"use client";
 
-import ArrowDownIcon from "../../icons/ArrowDownIcon";
-import ArrowUpIcon from "../../icons/ArrowUpIcon";
 import { AuthLevel } from "@/types/user";
 import CommunitySection from "./CommunitySection";
 import ContentSection from "./ContentSection";
 import ContractSection from "./ContractSection";
-import Gap from "../../basic/Gap";
-import Link from "next/link";
 import ServiceSection from "./ServiceSection";
+import audioguysLogo from "@/assets/audioguys-logo.png";
+import { layout, wordmarkMarginBottom } from "@/styles/layout-metrics";
 import styled from "styled-components";
-import theme from "@/styles/theme";
 import { useAuthStore } from "@/stores/use-auth-store";
-import { useState } from "react";
 
 const SidebarContainer = styled.nav`
   display: flex;
   flex-direction: column;
   width: 320px;
-  background-color: ${theme.colors.gray[25]};
-  padding: 100px 28px;
-  position: fixed; /* 사이드바 고정 */
-  height: 100vh; /* 전체 높이 사용 */
-  overflow-y: auto; /* 내용이 많을 경우 스크롤 가능하도록 */
+  background-color: #0a0a0a;
+  color: #fafafa;
+  padding: ${layout.sidebarPaddingTop}px 24px 48px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #2a2a2a;
+  gap: ${layout.sidebarGap}px;
+
+  &::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
     min-width: auto;
     border-right: none;
-    border-bottom: 1px solid #e5e7eb;
-    position: relative; /* 모바일에서는 고정하지 않음 */
-    height: auto; /* 모바일에서는 자동 높이 */
+    border-bottom: 1px solid #2a2a2a;
+    position: relative;
+    height: auto;
   }
+`;
 
-  gap: 32px;
+const Brand = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: ${layout.wordmarkPaddingTop}px 0 ${layout.wordmarkPaddingBottom}px;
+  margin-bottom: ${wordmarkMarginBottom}px;
+`;
+
+const Logo = styled.img`
+  width: ${layout.logoWidth}px;
+  height: ${layout.logoHeight}px;
+  display: block;
+  margin: 0 0 ${layout.logoGap}px;
+  object-fit: contain;
+  object-position: left center;
+  border: 0;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+`;
+
+const BrandMark = styled.div`
+  font-family: "Recital", serif;
+  font-weight: 400;
+  font-size: ${layout.wordmarkFontSize}px;
+  line-height: ${layout.wordmarkLineHeight};
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  white-space: nowrap;
+`;
+
+const TradeMark = styled.span`
+  font-family: var(--font-pretendard), Pretendard, sans-serif;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 `;
 
 export default function Sidebar() {
@@ -42,6 +85,18 @@ export default function Sidebar() {
 
   return (
     <SidebarContainer>
+      <Brand>
+        <Logo
+          src={audioguysLogo.src}
+          width={audioguysLogo.width}
+          height={audioguysLogo.height}
+          alt=""
+          aria-label="Audioguys"
+        />
+        <BrandMark>
+          Audioguys for Artists<TradeMark>™</TradeMark>
+        </BrandMark>
+      </Brand>
       {user.authLevel === AuthLevel.ADMIN && <ContractSection />}
       {user.authLevel === AuthLevel.ADMIN && (
         <ContentSection authLevel={user.authLevel} />

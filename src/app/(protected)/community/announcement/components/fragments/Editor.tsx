@@ -19,8 +19,8 @@ const EditorWrapper = styled.div`
 
   .ql-toolbar {
     border: none !important;
-    border-top: 1px solid #ccc !important;
-    border-bottom: 1px solid #ccc !important;
+    border-top: 1px solid #eaeaea !important;
+    border-bottom: 1px solid #eaeaea !important;
   }
 
   .ql-editor {

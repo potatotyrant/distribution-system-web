@@ -1,10 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
-
 import CustomToaster from "@/components/CustomToaster";
 // import "./globals.css";
 import GlobalStyles from "@/styles/global-styles";
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "@/lib/registry";
+import "@/styles/fonts.css";
 import localFont from "next/font/local";
 
 const pretendard = localFont({

@@ -136,7 +136,7 @@ const AddNewDspContract = () => {
       width: "auto",
       maxWidth: "1065px",
       padding: "56px 64px",
-      borderRadius: "8px",
+      borderRadius: "2px",
     },
     overlay: {
       backgroundColor: "rgba(0, 0, 0, 0.5)",

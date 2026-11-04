@@ -20,7 +20,7 @@ const Container = styled.div``;
 const Label = styled.div`
   font-size: 16px;
   font-weight: 500;
-  color: #374151;
+  color: #1a1a1a;
 `;
 
 // 기여자 유형1 옵션 (참여 아티스트와 동일)

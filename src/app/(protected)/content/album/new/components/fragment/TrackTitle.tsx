@@ -122,7 +122,7 @@ export default function TrackTitle({
           gap: "4px",
           fontSize: "16px",
           fontWeight: "500",
-          color: "#374151",
+          color: "#1a1a1a",
         }}
       >
         트랙명 <span style={{ color: "red" }}>*</span>
