@@ -22,7 +22,7 @@ export const layout = {
 } as const;
 
 /** Distance from the wordmark's bottom edge to the first menu row. */
-export const wordmarkToMenuGap = 13.01;
+export const wordmarkToMenuGap = 32;
 
 export const wordmarkMarginBottom =
   wordmarkToMenuGap -
