@@ -84,7 +84,7 @@ const TradeMark = styled.span`
   font-weight: 400;
   font-size: 33px;
   line-height: 1;
-  vertical-align: super;
+  vertical-align: 7.25px;
   color: inherit;
 `;
 
