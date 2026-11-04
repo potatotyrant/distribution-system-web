@@ -2,6 +2,7 @@
 
 import { AuthLevel } from "@/types/user";
 import LoginForm from "./components/LoginForm";
+import loginPhoto from "@/assets/login-photo.webp";
 import styled from "styled-components";
 import { useAuthStore } from "@/stores/use-auth-store";
 import { useEffect } from "react";
@@ -44,7 +45,20 @@ const LeftSection = styled.div`
   }
 `;
 
+const PanelPhoto = styled.img`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 42% 60%;
+  border: 0;
+  pointer-events: none;
+`;
+
 const PanelCopy = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,6 +76,7 @@ const PanelTitle = styled.h2`
   line-height: 1.3;
   color: #fafafa;
   white-space: nowrap;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.72);
 `;
 
 const TradeMark = styled.span`
@@ -79,6 +94,7 @@ const PanelSub = styled.p`
   letter-spacing: -0.01em;
   line-height: 1.4;
   color: #fafafa;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.72);
 `;
 
 const RightSection = styled.div`
@@ -110,6 +126,13 @@ export default function LoginPage() {
   return (
     <Container>
       <LeftSection>
+        <PanelPhoto
+          src={loginPhoto.src}
+          width={loginPhoto.width}
+          height={loginPhoto.height}
+          alt=""
+          aria-label="Hands on a mixing console"
+        />
         <PanelCopy>
           <PanelTitle>
             Audioguys for Artists<TradeMark>™</TradeMark>
